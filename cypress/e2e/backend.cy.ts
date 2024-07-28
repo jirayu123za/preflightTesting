@@ -1,7 +1,7 @@
 import 'cypress-file-upload';
 
 describe("Backend", () => {
-  const url = 'http://localhost:3000';
+  const url = 'http://localhost:3004';
 
   // checks env
   it("checks env", () => {
@@ -20,7 +20,6 @@ describe("Backend", () => {
   });
   
   //! checks create student
-  /*
   it('should create a new student', () => {
     cy.request({
       method: 'PUT',
@@ -39,7 +38,6 @@ describe("Backend", () => {
       expect(response.body).to.have.property("email", "cypress.testing@example.com");
     });
   });
-  */
 
   // check query all students
   it('should query all students', () => {
@@ -85,7 +83,6 @@ describe("Backend", () => {
   });
 
   //! check delete student by ID
-  /*
   it('should delete a student', () => {
     cy.request({
       method: 'DELETE',
@@ -96,10 +93,8 @@ describe("Backend", () => {
       expect(response.body).to.have.property('message', 'Student deleted successfully');
     });
   });
-  */
 
   //! check upload multiple students
-  /*
   it('should upload students via CSV', () => {
     const filePath = 'students.csv';
 
@@ -119,6 +114,5 @@ describe("Backend", () => {
       });
     });
   });
-  */
 })
 
